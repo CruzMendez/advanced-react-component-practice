@@ -1,6 +1,11 @@
 import React from "react";
+import SideNav from "./components/SideNav";
 import TopNav from "./components/TopNav";
 import PropTypes from "prop-types";
+import Comments from "./components/Comments";
+import Tasks from "./components/Tasks"
+import Orders from "./components/Orders"
+import Tickets from "./components/Tickets"
 
 function App(props) {
  
@@ -12,48 +17,9 @@ function App(props) {
           <TopNav />
           {/*   </TopNav>   */}
 
-
-            {/*   <SideNav>   */}
-            <div className="collapse navbar-collapse navbar-ex1-collapse">
-                <ul className="nav navbar-nav side-nav">
-                    <li className="active">
-                        <a href="index.html"><i className="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="charts.html"><i className="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
-                        <a href="tables.html"><i className="fa fa-fw fa-table"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i className="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i className="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i className="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i className="fa fa-fw fa-arrows-v"></i> Dropdown <i className="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" className="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><i className="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>
-                    <li>
-                        <a href="index-rtl.html"><i className="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                    </li>
-                </ul>
-            </div>
-            {/*   </SideNav>   */}
+          {/*   <SideNav>   */}
+          <SideNav />
+          {/*   </SideNav>   */}
         </nav>
 
         <div id="page-wrapper">
@@ -76,104 +42,20 @@ function App(props) {
                 <div className="row">
 
                    {/*   </Comments>   */}
-                    <div className="col-lg-3 col-md-6">
-                        <div className="panel panel-primary">
-                            <div className="panel-heading">
-                                <div className="row">
-                                    <div className="col-xs-3">
-                                        <i className="fa fa-comments fa-5x"></i>
-                                    </div>
-                                    <div className="col-xs-9 text-right">
-                                        <div className="huge">26</div>
-                                        <div>New Comments!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div className="panel-footer">
-                                    <span className="pull-left">View Details</span>
-                                    <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
-                                    <div className="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                   <Comments/>
                     {/*   </Comments>   */}
 
                     {/*   <Tasks>   */}
-                    <div className="col-lg-3 col-md-6">
-                        <div className="panel panel-green">
-                            <div className="panel-heading">
-                                <div className="row">
-                                    <div className="col-xs-3">
-                                        <i className="fa fa-tasks fa-5x"></i>
-                                    </div>
-                                    <div className="col-xs-9 text-right">
-                                        <div className="huge">12</div>
-                                        <div>New Tasks!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div className="panel-footer">
-                                    <span className="pull-left">View Details</span>
-                                    <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
-                                    <div className="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    <Tasks/>
                     {/*   </Tasks>   */}
 
                     {/*   <Orders>   */}
-                    <div className="col-lg-3 col-md-6">
-                        <div className="panel panel-yellow">
-                            <div className="panel-heading">
-                                <div className="row">
-                                    <div className="col-xs-3">
-                                        <i className="fa fa-shopping-cart fa-5x"></i>
-                                    </div>
-                                    <div className="col-xs-9 text-right">
-                                        <div className="huge">124</div>
-                                        <div>New Orders!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div className="panel-footer">
-                                    <span className="pull-left">View Details</span>
-                                    <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
-                                    <div className="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    <Orders/>
                     {/*   </Orders>   */}
 
 
                     {/*   <Tickets>   */}
-                    <div className="col-lg-3 col-md-6">
-                        <div className="panel panel-red">
-                            <div className="panel-heading">
-                                <div className="row">
-                                    <div className="col-xs-3">
-                                        <i className="fa fa-support fa-5x"></i>
-                                    </div>
-                                    <div className="col-xs-9 text-right">
-                                        <div className="huge">13</div>
-                                        <div>Support Tickets!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div className="panel-footer">
-                                    <span className="pull-left">View Details</span>
-                                    <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
-                                    <div className="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    <Tickets/>
                     {/*   </Tickets>   */}
 
 
